@@ -135,13 +135,13 @@ function Cadastro() {
                         />
                     </div>
                     <div className="flex justify-around w-full gap-8">
-                        <button className='rounded text-white bg-red-400 
-                           hover:bg-red-700 w-1/2 py-2' onClick={retornar}>
+                        <button className='rounded text-white bg-red-700 
+                           hover:bg-red-900 w-1/2 py-2' onClick={retornar}>
                             Cancelar
                         </button>
                         <button
                             type='submit'
-                            className='rounded text-white bg-indigo-400 
+                            className='rounded text-white bg-indigo-800 
                            hover:bg-indigo-900 w-1/2 py-2
                            flex justify-center'
                         >
