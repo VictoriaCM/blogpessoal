@@ -35,7 +35,7 @@ function Login() {
 
   return (
     <>
-      <div className="grid grid-cols-1 lg:grid-cols-2 
+      <div className="bg-slate-400 grid grid-cols-1 lg:grid-cols-2 
                     h-screen place-items-center font-bold ">
         <form className="flex justify-center items-center flex-col w-1/2 gap-4"
           onSubmit={login}>
@@ -66,8 +66,8 @@ function Login() {
           </div>
           <button
             type='submit'
-            className="rounded bg-indigo-800 flex justify-center
-                                   hover:bg-indigo-900 text-white w-1/2 py-2">
+            className="rounded bg-sky-900 flex justify-center
+                                   hover:bg-slate-700 text-white w-1/2 py-2">
 
             {isLoading ? <RotatingLines
               strokeColor="white"
@@ -84,7 +84,7 @@ function Login() {
 
           <p>
             Ainda não tem uma conta?{' '}
-            <Link to="/cadastro" className="text-slate-600 hover:underline">
+            <Link to="/cadastro" className="text-sky-800 hover:underline">
               Cadastre-se
             </Link>
           </p>

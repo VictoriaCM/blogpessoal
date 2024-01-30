@@ -4,6 +4,7 @@ import './Cadastro.css'
 import { useNavigate } from 'react-router-dom'
 import { cadastrarUsuario } from '../../services/Service'
 import { RotatingLines } from 'react-loader-spinner'
+import { ToastAlerta } from '../../util/ToastAlerta'
 
 function Cadastro() {
 
@@ -53,12 +54,12 @@ function Cadastro() {
 
             try {
                 await cadastrarUsuario(`/usuarios/cadastrar`, usuario, setUsuario)
-                alert('Usuário cadastrado com sucesso!')
+                ToastAlerta('Usuário cadastrado com sucesso!', "sucesso")
             } catch (error) {
-                alert('Erro ao cadastrar o usuário!')
+                ToastAlerta('Erro ao cadastrar o usuário!', "erro")
             }
         } else {
-            alert('Dados estão inconsistentes. Verifique as informações do cadastro')
+            ToastAlerta('Dados estão inconsistentes. Verifique as informações do cadastro', "erro")
             setUsuario({ ...usuario, senha: '' })
             setConfirmaSenha('')
         }
@@ -68,12 +69,12 @@ function Cadastro() {
 
     return (
         <>
-            <div className="grid grid-cols-1 lg:grid-cols-2 h-screen 
+            <div className=" bg-slate-400 grid grid-cols-1 lg:grid-cols-2 h-screen 
             place-items-center font-bold">
                 <div className="fundoCadastro hidden lg:block"></div>
                 <form className='flex justify-center items-center flex-col w-2/3 gap-3'
                     onSubmit={cadastrarNovoUsuario}>
-                    <h2 className='text-slate-900 text-5xl'>Cadastrar</h2>
+                    <h2 className='text-slate-900 text-5xl'>Cadastre-se</h2>
                     <div className="flex flex-col w-full">
                         <label htmlFor="nome">Nome</label>
                         <input
