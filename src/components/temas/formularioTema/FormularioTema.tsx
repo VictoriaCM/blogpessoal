@@ -114,8 +114,8 @@ function FormularioTema() {
                     />
                 </div>
                 <button
-                    className="rounded-md text-slate-100 bg-indigo-700 
-                               hover:bg-indigo-900 w-1/2 py-2 mx-auto flex justify-center"
+                    className="rounded-md text-slate-100 bg-sky-900 
+                               hover:bg-sky-700 w-1/2 py-2 mx-auto flex justify-center"
                     type="submit">
 
                     {isLoading ?
